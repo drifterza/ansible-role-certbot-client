@@ -2,16 +2,17 @@
 - name: configure certbot
   hosts: managesf
   become: true
-  certbot_create_if_missing: true
-  certbot_admin_email: "donovan.francesco@gmail.com"
-  certbot_auto_renew_user: "root"
-  certbot_auto_renew_minute: "20"
-  certbot_auto_renew_hour: "5"
-  certbot_certs:
-    - email: "donovan.francesco@gmail.com"
-      domains:
-        - managesf.zuul.dnssolutions.io
-  certbot_create_standalone_stop_services:
-    - httpd 
+  vars:
+    certbot_create_if_missing: true
+    certbot_admin_email: "donovan.francesco@gmail.com"
+    certbot_auto_renew_user: "root"
+    certbot_auto_renew_minute: "20"
+    certbot_auto_renew_hour: "5"
+    certbot_certs:
+      - email: "donovan.francesco@gmail.com"
+        domains:
+          - managesf.zuul.dnssolutions.io
+    certbot_create_standalone_stop_services:
+      - httpd 
   roles:
-  - { role: ansible-role-certbot }
+    - { role: ansible-role-certbot }
