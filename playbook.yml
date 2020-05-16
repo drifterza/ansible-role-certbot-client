@@ -16,4 +16,4 @@
       - httpd
     certbot_install_from_source: true
   roles:
-    - { role: ansible-role-certbot }
+    - { role: ../ansible-role-certbot }

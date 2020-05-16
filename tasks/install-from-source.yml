@@ -1,4 +1,13 @@
 ---
+- name: Install Apache
+  yum:
+    name: httpd
+    state: latest
+- name: Ensure Apache is started and enabled for next boot.
+  service:
+    name: httpd
+    state: started
+    enabled: true
 - name: Clone Certbot into configured directory.
   git:
     repo: "{{ certbot_repo }}"
