@@ -8,10 +8,10 @@
   certbot_auto_renew_minute: "20"
   certbot_auto_renew_hour: "5"
   certbot_certs:
-    - email: "donovan.francesco@gmail.com.com"
+    - email: "donovan.francesco@gmail.com"
       domains:
-        - manages.zuul.dnssolutions.io
+        - managesf.zuul.dnssolutions.io
   certbot_create_standalone_stop_services:
     - httpd 
   roles:
-    - { role: ansible-role-certbot }
+  - { role: ansible-role-certbot }
