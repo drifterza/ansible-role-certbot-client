@@ -11,7 +11,7 @@
     certbot_certs:
       - email: "donovan.francesco@gmail.com"
         domains:
-          - managesf.zuul.dnssolutions.io
+          - zuul.dnssolutions.io
     certbot_create_standalone_stop_services:
       - httpd
     certbot_install_from_source: true
